@@ -1,21 +1,33 @@
 # letterboxd checker
-checks usernames on letterboxd (bypasses cloudflare via TLS fingerprint spoofing)
 
-## setup
+`username checker / letterboxd`
+checks usernames tracks what's been checked saves available names.
+
+```bash
 py -m pip install curl_cffi
-
-## run
 py checker.py
+```
 
-## files
+## `files`
+
+```text
 data/
-├── wordlist.txt # usernames to check (one per line)
-├── checked.txt # auto generated tracks what's been done
-└── ava.txt # available usernames land here
+├── wordlist.txt    # names to check
+├── checked.txt     # already scanned
+└── ava.txt         # available names
+```
 
-## notes
-- "all checked" = you already ran it delete `data/checked.txt` to re-run
-- 429s = rate limited it retries automatically
-- No affiliation with letterboxd
+## `notes`
 
--> https://github.com/imsolost010101 <-
+- `all checked` — wordlist is exhausted.
+- `429` — rate limited. retries automatically.
+- delete `data/checked.txt` to start fresh.
+- one username per line in `wordlist.txt`.
+
+## `credits`
+
+no affiliation with Letterboxd.
+
+[github.com/imsolost010101](https://github.com/imsolost010101)
+
+`x_x`
